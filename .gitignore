@@ -1,0 +1,11 @@
+/target
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.class
+docs/diagrams/*.bkp
+docs/diagrams/*.$
+docs/diagrams/*.drawio
