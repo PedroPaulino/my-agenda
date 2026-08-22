@@ -7,13 +7,16 @@ public class Chat {
     
     private UUID id;
     private List<Contact> participants;
+    private ChatType chatType;
     private List<Message> messages;
 
-    public Chat(List<Contact> participants, List<Message> messages) {
+    public Chat(List<Contact> participants, List<Message> messages, ChatType chatType) {
         this.id = UUID.randomUUID();
         this.participants = participants;
         this.messages = messages;
+        this.chatType = chatType;
     }
+    
     public UUID getId() {
         return id;
     }
@@ -31,6 +34,14 @@ public class Chat {
     }
     public void setMessages(List<Message> messages) {
         this.messages = messages;
+    }
+
+    public ChatType getChatType() {
+        return chatType;
+    }
+
+    public void setChatType(ChatType chatType) {
+        this.chatType = chatType;
     }
 
     
