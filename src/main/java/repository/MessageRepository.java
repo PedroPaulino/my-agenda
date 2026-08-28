@@ -17,14 +17,8 @@ public class MessageRepository {
             .orElse(null);
     }
 
-    public Message saveMessage(Message message){
-
-        try {
-            mockMessageDb.add(message);
-            return message;
-        } catch (Exception e) {
-            return null;
-        }
+    public void saveMessage(Message message){
+        mockMessageDb.add(message);
     }
 
     public List<Message> getAll(){

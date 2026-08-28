@@ -17,19 +17,13 @@ public class ChatRepository {
 
     }
 
-    public Chat saveChat(Chat chat){
-
-        try{
-            mockChatDb.add(chat);
-            return chat;
-        } catch (Exception e){
-            return null;
-        }
+    public void saveChat(Chat chat){
+        mockChatDb.add(chat);
 
     }
 
-    public boolean deleteChat(Chat chat){
-        return mockChatDb.remove(chat);
+    public void deleteChat(Chat chat){
+        mockChatDb.remove(chat);
     }
     
 }

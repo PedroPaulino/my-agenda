@@ -31,19 +31,15 @@ public class GroupRepository {
 
     }
 
-    public Group saveGroup(Group group){
+    public void saveGroup(Group group){
 
-        try {
-            mockGroupDb.add(group);
-            return group;
-        } catch (Exception e) {
-            return null;
-        }
+        mockGroupDb.add(group);
+
 
     }
 
-    public Boolean deleteGroup(Group group){
-        return mockGroupDb.remove(group);
+    public void deleteGroup(Group group){
+        mockGroupDb.remove(group);
     }
 
 }

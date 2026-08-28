@@ -34,18 +34,13 @@ public class ContactHashMapRepository {
         return result;
      }
 
-    public Contact addContact(Contact contact) {
-
-        try {
-            mockContactDb.put(contact.getId(), contact);
-            return contact;
-        } catch (Exception e) {
-            return null;
-        }
+    public void addContact(Contact contact) {
+        
+        mockContactDb.put(contact.getId(), contact);
 
     }
-     public Boolean deleteContact(Contact contact){
-        return mockContactDb.remove(contact.getId(), contact);
+     public void deleteContact(Contact contact){
+        mockContactDb.remove(contact.getId(), contact);
      }
 
 }

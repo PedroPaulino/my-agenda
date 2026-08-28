@@ -31,19 +31,15 @@ public class ContactArrayListRepository {
         return result;
     }
 
-    public Contact addContact(Contact contact) {
+    public void addContact(Contact contact) {
 
-        try {
-            mockContactDb.add(contact);
-            return contact;
-        } catch (Exception e) {
-            return null;
-        }
+        mockContactDb.add(contact);
     }
 
-    public Boolean deleteContact(Contact contact) {
+    public void deleteContact(Contact contact) {
 
-        return mockContactDb.remove(contact);
+        mockContactDb.remove(contact);
+        
     }
 
 }
