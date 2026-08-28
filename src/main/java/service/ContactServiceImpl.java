@@ -51,19 +51,21 @@ public class ContactServiceImpl implements ContactService {
 
         arrayListContactRepository.addContact(contact);
 
-        return null;
+        return contact;
     }
 
     @Override
     public void deleteContact(UUID id) {
         
-        Contact contactToBeDeleted = findContactById(id);
+        Contact contactDeletedResponse = findContactById(id);
 
-        arrayListContactRepository.deleteContact(contactToBeDeleted);
+        arrayListContactRepository.deleteContact(contactDeletedResponse);
         
     }
     
-    private void validateContact(Contact contact){
+    @Override
+    public void validateContact(Contact contact){
+        /* TODO: Update SDD - sequence diagram */
 
         if (this.isContactAlreadyRegistered(contact)) {
             throw new MyAgendaException("Contact already exists");

@@ -11,5 +11,6 @@ public interface ContactService {
     public List<Contact> findContactsByName(String name);
     public Contact registerContact(Contact contact);
     public void deleteContact(UUID id);
+    public void validateContact(Contact contact);
 
 }
