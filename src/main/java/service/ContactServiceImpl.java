@@ -27,7 +27,7 @@ public class ContactServiceImpl implements ContactService {
 
         if ( resultContact == null) {
             
-            throw new MyAgendaException("Contact ID: " + id + " Not found. Please provide a valide ID.");
+            throw new MyAgendaException("Contact ID: " + id + " Not found. Please provide a valid ID.");
         }
     
         return resultContact;
@@ -37,7 +37,7 @@ public class ContactServiceImpl implements ContactService {
     public List<Contact> findContactsByName(String name) {
         
         if ( name.isBlank() || name.isEmpty() ) {
-            throw new MyAgendaException("Name cannot be Empty or Blank. Please provide a valide Name.");
+            throw new MyAgendaException("Name cannot be Empty or Blank. Please provide a valid Name.");
         }
 
         return arrayListContactRepository.findContactsByName(name);
