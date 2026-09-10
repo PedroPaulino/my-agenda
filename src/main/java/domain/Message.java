@@ -1,6 +1,7 @@
 package domain;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 public class Message {
@@ -9,16 +10,15 @@ public class Message {
     private String content;
     private Contact sender;
     private Chat chat;
-    private LocalDateTime sentAt;
+    private String sentAt;
+    private DateTimeFormatter dtFormater = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-    
-
-    public Message(String content, Contact sender, Chat chat, LocalDateTime sentAt) {
+    public Message(String content, Contact sender, Chat chat) {
         this.id = UUID.randomUUID();
         this.content = content;
         this.sender = sender;
         this.chat = chat;
-        this.sentAt = sentAt;
+        this.sentAt = LocalDateTime.now().format(dtFormater);
     }
     public UUID getId() {
         return id;
@@ -44,11 +44,11 @@ public class Message {
     public void setChat(Chat chat) {
         this.chat = chat;
     }
-    public LocalDateTime getSentAt() {
+    public String getSentAt() {
         return sentAt;
     }
     public void setSentAt(LocalDateTime sentAt) {
-        this.sentAt = sentAt;
+        this.sentAt = sentAt.format(dtFormater);
     }
 
 }

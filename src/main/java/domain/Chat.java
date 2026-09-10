@@ -1,16 +1,17 @@
 package domain;
 
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public class Chat {
     
     private UUID id;
-    private List<Contact> participants;
+    private Set<Contact> participants;
     private ChatType chatType;
     private List<Message> messages;
 
-    public Chat(List<Contact> participants, List<Message> messages, ChatType chatType) {
+    public Chat(Set<Contact> participants, List<Message> messages, ChatType chatType) {
         this.id = UUID.randomUUID();
         this.participants = participants;
         this.messages = messages;
@@ -23,10 +24,10 @@ public class Chat {
     public void setId(UUID id) {
         this.id = id;
     }
-    public List<Contact> getParticipants() {
+    public Set<Contact> getParticipants() {
         return participants;
     }
-    public void setParticipants(List<Contact> participants) {
+    public void setParticipants(Set<Contact> participants) {
         this.participants = participants;
     }
     public List<Message> getMessages() {
