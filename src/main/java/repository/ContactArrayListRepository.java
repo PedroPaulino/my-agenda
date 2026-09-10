@@ -9,6 +9,10 @@ import domain.Contact;
 public class ContactArrayListRepository {
     private ArrayList<Contact> mockContactDb;
 
+    public ContactArrayListRepository(){
+        this.mockContactDb = new ArrayList<Contact>();
+    }
+
     public Contact findContactById(UUID id) {
 
         return mockContactDb.stream()

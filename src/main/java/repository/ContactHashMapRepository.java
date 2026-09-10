@@ -10,6 +10,10 @@ import domain.Contact;
 public class ContactHashMapRepository {
     private HashMap<UUID, Contact> mockContactDb;
     
+    public  ContactHashMapRepository(){
+        this.mockContactDb = new HashMap<UUID, Contact>();
+    }
+
     public Contact findContactById(UUID id){
 
         if ( mockContactDb.containsKey(id) ){

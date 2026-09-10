@@ -9,6 +9,10 @@ import domain.Group;
 public class GroupRepository {
     private List<Group> mockGroupDb;
 
+    public GroupRepository(){
+        this.mockGroupDb = new ArrayList<Group>();
+    }
+
     public Group findGroupById(UUID id){
 
         return mockGroupDb.stream()

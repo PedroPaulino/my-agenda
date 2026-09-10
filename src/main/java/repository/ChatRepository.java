@@ -1,5 +1,6 @@
 package repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -7,6 +8,10 @@ import domain.Chat;
 
 public class ChatRepository {
     private List<Chat> mockChatDb;
+
+    public ChatRepository(){
+        this.mockChatDb = new ArrayList<Chat>();
+    }
 
     public Chat findChatById(UUID id){
 
