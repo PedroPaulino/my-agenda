@@ -18,5 +18,6 @@ public interface GroupService {
     public void deleteGroup(Group group, Contact requester);
     public boolean isOwner(Group group, Contact contact);
     public boolean isAdmin(Group group, Contact contact);
+    
 
 }

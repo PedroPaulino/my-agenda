@@ -13,7 +13,7 @@ public class ContactServiceImpl implements ContactService {
     private ContactHashMapRepository hashMapContactRepository;
     private ContactArrayListRepository arrayListContactRepository;
 
-    ContactServiceImpl(ContactHashMapRepository hashMapContactRepository, ContactArrayListRepository arrayListContactRepository){
+    public ContactServiceImpl(ContactHashMapRepository hashMapContactRepository, ContactArrayListRepository arrayListContactRepository){
 
         this.hashMapContactRepository = hashMapContactRepository;
         this.arrayListContactRepository = arrayListContactRepository;
