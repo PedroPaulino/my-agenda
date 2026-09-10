@@ -31,10 +31,6 @@ MyAgenda system is a layered Java Application following Domain-Service-Repositor
 
 ![alt text](/docs/diagrams/Add%20Member%20Sequence%20Diagram.jpg)
 
-- *Send Message*
-
-![alt text](/docs/diagrams/Send%20Message%20Sequence%20Diagram.jpg)
-
 **5.Design Decisions**
 
 - *Decision:* Repository Pattern 
