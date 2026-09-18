@@ -27,7 +27,7 @@ public class ContactArrayListRepository {
 
         for (Contact contact : mockContactDb) {
 
-            if (contact.getName().contains(contactName)) {
+            if (contact.getName().toLowerCase().contains(contactName.toLowerCase())) {
                 result.add(contact);
             }
         }
