@@ -10,7 +10,7 @@ public interface GroupService {
 
     public Group findGroupById(UUID id);
     public List<Group> findGroupsByName(String name);
-    public Group createGroup(Group group, Contact owner);
+    public Group createGroup(Contact owner, String groupName);
     public void addMember(Group group, Contact member, Contact requester);
     public void removeMember(Group group, Contact member, Contact requester);
     public void grantAdmin(Group group, Contact member, Contact requester);
