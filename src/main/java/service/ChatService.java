@@ -12,7 +12,7 @@ public interface ChatService {
     
     public Chat findChatById(UUID id);
     public Chat createPrivateChat(Contact user1, Contact user2);
-    public Chat createGroupChat(Group group);
+    public Chat createGroupChat(Contact owner);
     public void deleteChat(Chat chat);
     public Boolean isParticipant(Chat chat, Contact sender);
     public Message findMessageById(Chat chat, UUID id);

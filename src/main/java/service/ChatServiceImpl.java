@@ -22,11 +22,14 @@ public class ChatServiceImpl implements ChatService {
     }
 
     @Override
-    public Chat createGroupChat(Group group) {
+    public Chat createGroupChat(Contact owner) {
 
         List<Message> messages = new ArrayList<Message>();
 
-        Chat groupChat = new Chat(group.getMembers(), messages, ChatType.GROUP);
+        Set<Contact> participants = new HashSet<Contact>();
+        participants.add(owner);
+
+        Chat groupChat = new Chat(participants, messages, ChatType.GROUP);
 
         repository.saveChat(groupChat);
 
