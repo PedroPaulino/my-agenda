@@ -3,14 +3,11 @@ import java.util.List;
 import domain.Chat;
 import domain.Contact;
 import domain.Group;
-import domain.Message;
 import repository.ChatRepository;
 import repository.ContactArrayListRepository;
 import repository.ContactHashMapRepository;
 import repository.GroupRepository;
-import service.ChatService;
 import service.ChatServiceImpl;
-import service.ContactService;
 import service.ContactServiceImpl;
 import service.GroupServiceImpl;
 
@@ -147,7 +144,7 @@ public class Application {
         System.out.println("------------------ GROUP CHAT --------------");
 
         GroupRepository groupRepository = new GroupRepository();
-        GroupServiceImpl groupService = new GroupServiceImpl(groupRepository, contactService, chatService);
+        GroupServiceImpl groupService = new GroupServiceImpl(groupRepository, chatService);
         Group group = groupService.createGroup(contact4, "Software Engineers");
 
         groupService.addMember(group, contact1, contact4);

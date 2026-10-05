@@ -9,7 +9,6 @@ import java.util.UUID;
 import domain.Chat;
 import domain.ChatType;
 import domain.Contact;
-import domain.Group;
 import domain.Message;
 import exception.MyAgendaException;
 import repository.ChatRepository;

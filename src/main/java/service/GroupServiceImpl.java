@@ -13,12 +13,10 @@ import repository.GroupRepository;
 
 public class GroupServiceImpl implements GroupService{
     private GroupRepository repository;
-    private ContactServiceImpl contactService;
     private ChatServiceImpl chatService;
 
-    public GroupServiceImpl(GroupRepository repository, ContactServiceImpl contactService, ChatServiceImpl chatService){
+    public GroupServiceImpl(GroupRepository repository, ChatServiceImpl chatService){
         this.repository = repository;
-        this.contactService = contactService;
         this.chatService = chatService;
     }
 

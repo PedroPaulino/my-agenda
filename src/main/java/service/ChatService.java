@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import domain.Chat;
 import domain.Contact;
-import domain.Group;
 import domain.Message;
 
 public interface ChatService {
