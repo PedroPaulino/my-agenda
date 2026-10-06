@@ -102,7 +102,7 @@ public class ContactRepositoryBenchmark {
     public static List<Contact> createContacts(int size){
         List<Contact> contacts = new ArrayList<>();
 
-        for(int numContact = 0; numContact <= size; numContact++){
+        for(int numContact = 0; numContact < size; numContact++){
 
             Contact contact = new Contact(
                 "contact_number_" + numContact,
